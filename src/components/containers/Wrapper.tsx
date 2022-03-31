@@ -6,5 +6,5 @@ export const Wrapper = styled.div`
     background-color: #ffffff;
     margin: 0;
     padding: 0;
-    font-family: 'Oceanwide';
+    font-family: 'SuecaSlab', 'Georgia', 'serif';
 `
