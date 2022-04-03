@@ -1,13 +1,12 @@
-import React from 'react';
-import './App.css';
-import { Wrapper } from './components/containers/Wrapper';
-import { Theme } from './theme/theme';
-import { ThemeProvider } from '@mui/material';
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
-import { Home } from './views/home';
+import React from 'react'
+import './App.css'
+import { Wrapper } from './components/containers/Wrapper'
+import { Theme } from './theme/theme'
+import { ThemeProvider } from '@mui/material'
+import { BrowserRouter, Routes, Route } from 'react-router-dom'
+import { Home } from './views/home'
 
-
-function App() {
+function App () {
   return (
     <Wrapper>
       <ThemeProvider theme={Theme}>
@@ -18,7 +17,7 @@ function App() {
         </BrowserRouter>
       </ThemeProvider>
     </Wrapper>
-  );
+  )
 }
 
-export default App;
+export default App
