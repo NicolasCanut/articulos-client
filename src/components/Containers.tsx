@@ -8,11 +8,12 @@ export const Main = styled.div<{height: string; flexDirection: string; marginTop
     max-width: 90%;
     margin: auto;
     margin-top: ${(props) => props.marginTop};
+    border: 1px solid green;
 `
 
 export const Wrapper = styled.div`
-    height: 100vh;
-    width: 100vw;
+    height: 100%;
+    width: 100%;
     background-color: #ffffff;
     margin: 0;
     padding: 0;
