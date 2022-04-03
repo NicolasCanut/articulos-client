@@ -27,16 +27,16 @@ const Footer = () => {
     <Main height='200px' flexDirection='column' marginTop='0'>
     <FooterRow flex='1'>
         <FooterColumn flex='1' padding='0 50px 0 0'>
-          <ImgLink height='30px' width='30px' >
+          <ImgLink href='https://www.facebook.com/lanacion' height='30px' width='30px' target='_blank' rel='noopener noreferrer'>
             <Facebook sx={{ margin: { xs: '0 5px', md: '0' }, height: '100%', width: '100%' }}/>
           </ImgLink>
-          <ImgLink height='30px' width='30px' >
+          <ImgLink href='https://twitter.com/LANACION' height='30px' width='30px' target='_blank' rel='noopener noreferrer'>
             <Twitter sx={{ margin: { xs: '0 5px', md: '0' }, height: '100%', width: '100%' }}/>
           </ImgLink>
-          <ImgLink height='30px' width='30px' >
+          <ImgLink href='https://www.instagram.com/lanacioncom/' height='30px' width='30px' target='_blank' rel='noopener noreferrer'>
             <Instagram sx={{ margin: { xs: '0 5px', md: '0' }, height: '100%', width: '100%' }}/>
           </ImgLink>
-          <ImgLink height='30px' width='30px' >
+          <ImgLink href='http://servicios.lanacion.com.ar/herramientas/rss/ayuda' height='30px' width='30px' target='_blank' rel='noopener noreferrer'>
             <RssFeed sx={{ margin: { xs: '0 5px', md: '0' }, height: '100%', width: '100%' }}/>
           </ImgLink>
         </FooterColumn>
@@ -88,7 +88,7 @@ const Footer = () => {
         <p>
           Miembro de GDA. Grupo de diarios América
         </p>
-        <ImgLink height='44px' width='32' href='https://serviciosweb.afip.gob.ar/clavefiscal/qr/publicInfoD.aspx'>
+        <ImgLink height='44px' width='32' href='https://serviciosweb.afip.gob.ar/clavefiscal/qr/publicInfoD.aspx' target='_blank' rel='noopener noreferrer'>
           <img style={{ height: '100%', width: '100%' }} src='https://static.glanacion.com/v2/ln/img/data.jpg' />
         </ImgLink>
       </FooterColumn>
