@@ -9,6 +9,7 @@ export const Main = styled.div<{height: string; flexDirection: string; marginTop
     margin: auto;
     margin-top: ${(props) => props.marginTop};
     border: 1px solid green;
+    overflow: hidden;
 `
 
 export const Wrapper = styled.div`
@@ -18,4 +19,6 @@ export const Wrapper = styled.div`
     margin: 0;
     padding: 0;
     font-family: 'SuecaSlab', 'Georgia', 'serif';
+    border: 1px solid blue;
+    overflow: hidden;
 `
