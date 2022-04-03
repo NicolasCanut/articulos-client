@@ -10,7 +10,7 @@ import InputBase from '@mui/material/InputBase'
 import MenuIcon from '@mui/icons-material/Menu'
 import SearchIcon from '@mui/icons-material/Search'
 import { Button } from '@mui/material'
-import { Main } from '../containers/Main'
+import { Main } from '../Containers'
 import { LanacionLogo } from '../../assets/lanacionLogo'
 
 const Search = styled('div')(({ theme }) => ({
@@ -53,7 +53,7 @@ const StyledInputBase = styled(InputBase)(({ theme }) => ({
   }
 }))
 
-export default function Navbar () {
+const Navbar = () => {
   const [prevScrollPos, setPrevScrollPos] = useState(0)
   const [visible, setVisible] = useState(true)
 
@@ -126,3 +126,5 @@ export default function Navbar () {
     </Box>
   )
 }
+
+export default Navbar

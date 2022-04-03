@@ -1,10 +1,10 @@
 import React from 'react'
 import './App.css'
-import { Wrapper } from './components/containers/Wrapper'
+import { Wrapper } from './components/Containers'
 import { Theme } from './theme/theme'
 import { ThemeProvider } from '@mui/material'
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
-import { Home } from './views/home'
+import Home from './views/home'
 
 function App () {
   return (

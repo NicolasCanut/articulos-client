@@ -1,10 +1,9 @@
 import React from 'react'
-import { Main } from '../components/containers/Main'
-import { Wrapper } from '../components/containers/Wrapper'
+import { Main, Wrapper } from '../components/Containers'
 import Navbar from '../components/navigation/navbar'
-import { Title } from '../components/typography/pageTitle'
+import { Title } from '../components/Typography'
 
-export const Home = () => {
+const Home = () => {
   return (
     <Wrapper>
       <Navbar />
@@ -14,3 +13,5 @@ export const Home = () => {
     </Wrapper>
   )
 }
+
+export default Home
