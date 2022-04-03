@@ -60,7 +60,7 @@ const Navbar = () => {
   const handleScroll = () => {
     const currentScrollPos = window.pageYOffset
 
-    setVisible((prevScrollPos > currentScrollPos && prevScrollPos - currentScrollPos > 70) || currentScrollPos < 10)
+    setVisible((prevScrollPos > currentScrollPos) || currentScrollPos < 10)
 
     setPrevScrollPos(currentScrollPos)
   }
