@@ -109,8 +109,11 @@ export default function Navbar () {
             component="div"
             sx={{ flexGrow: 1, display: { xs: 'flex', md: 'flex' }, height: { xs: '15px', md: '40px' }, width: { xs: '100px', md: '300px' }, justifyContent: 'center', margin: 'auto' }}
           >
+                <a style={{ height: '100%', width: '100%' }} href='/'>
               <LanacionLogo
-              imgSrc={require('../../assets/img/lanacionLogo.png')}/>
+              imgSrc={require('../../assets/img/lanacionLogo.png')}>
+              </LanacionLogo>
+                </a>
             </Typography>
           </Box>
           <Box sx={{ display: { xs: 'flex', md: 'flex' } }}>
