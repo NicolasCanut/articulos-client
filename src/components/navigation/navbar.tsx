@@ -114,7 +114,7 @@ export default function Navbar () {
             </Typography>
           </Box>
           <Box sx={{ display: { xs: 'flex', md: 'flex' } }}>
-            <Button sx={{ border: '1px solid lightgray', marginRight: { xs: '10px', md: '30px' }, fontSize: { xs: '10px', sm: '13px' }, backgroundColor: '#FFFF24' }} color="inherit">SUSCRIBITE</Button>
+            <Button sx={{ border: '1px solid lightgray', marginRight: { xs: '10px', md: '30px' }, fontSize: { xs: '10px', sm: '13px' }, backgroundColor: '#FFFF24', '&:hover': { color: '#000000', backgroundColor: '#FFFF24 !important' } }} color="inherit">SUSCRIBITE</Button>
             <Button sx={{ border: '1px solid', marginRight: { xs: '10px', md: '30px' }, fontSize: { xs: '10px', sm: '13px' } }} color='secondary'>INGRESAR</Button>
           </Box>
         </Toolbar>
