@@ -4,6 +4,7 @@ import { Facebook, Twitter, Instagram, RssFeed } from '@mui/icons-material'
 import { Main } from '../Containers'
 import CompanyLogo from '../../assets/companyLogo'
 import { ImgLink, TextLink } from '../Typography'
+import { Box } from '@mui/material'
 
 const FooterRow = styled.section<{mobileDisplay: string, flex: string }>`
     display: flex;
@@ -87,16 +88,18 @@ const Footer = () => {
           Suscribirse al diario impreso
         </TextLink>
       </FooterColumn>
-      <FooterColumn flex='1' margin='' mobileOrder='' style={{ flexWrap: 'wrap' }}>
-        <p>
+      <FooterColumn flex='1' margin='' mobileOrder='' style={{ flexWrap: 'wrap', justifyContent: 'flex-end' }}>
+        <p style={{ marginRight: '5px' }}>
           Protegido por re CAPTCHA:
         </p>
-        <TextLink href='https://policies.google.com/terms?hl=es-419' target='_blank' rel='noopener noreferrer'>
-          Condiciones
-        </TextLink>
-        <TextLink href='https://policies.google.com/privacy?hl=es-419' target='_blank' rel='noopener noreferrer'>
-          Privacidad
-        </TextLink>
+        <Box>
+          <TextLink href='https://policies.google.com/terms?hl=es-419' target='_blank' rel='noopener noreferrer'>
+            Condiciones
+          </TextLink>
+          <TextLink style={{ marginRight: '0' }} href='https://policies.google.com/privacy?hl=es-419' target='_blank' rel='noopener noreferrer'>
+            Privacidad
+          </TextLink>
+        </Box>
       </FooterColumn>
     </FooterRow>
     <FooterRow flex='1' mobileDisplay='flex'>
@@ -110,7 +113,7 @@ const Footer = () => {
         <p style={{ margin: '0 10px' }}>
           Miembro de GDA. Grupo de diarios América
         </p>
-        <ImgLink height='44px' width='32' href='https://serviciosweb.afip.gob.ar/clavefiscal/qr/publicInfoD.aspx' target='_blank' rel='noopener noreferrer'>
+        <ImgLink style={{ position: 'relative', top: '15px' }} height='44px' width='32' href='https://serviciosweb.afip.gob.ar/clavefiscal/qr/publicInfoD.aspx' target='_blank' rel='noopener noreferrer'>
           <img style={{ height: '100%', width: '100%' }} src='https://static.glanacion.com/v2/ln/img/data.jpg' />
         </ImgLink>
       </FooterColumn>

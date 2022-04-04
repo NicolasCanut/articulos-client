@@ -23,7 +23,7 @@ const Search = styled('div')(({ theme }) => ({
   marginRight: theme.spacing(2),
   marginLeft: 0,
   width: '100%',
-  [theme.breakpoints.up('sm')]: {
+  [theme.breakpoints.up('md')]: {
     marginLeft: theme.spacing(3),
     width: 'auto'
   }
@@ -92,7 +92,7 @@ const Navbar = () => {
           >
             <span style={{ fontFamily: 'Arial' }}>Menú</span>
           </Typography>
-          <Search sx={{ display: { xs: 'none', sm: 'block' }, border: '1px solid gray' }}>
+          <Search sx={{ display: { sm: 'none', lg: 'block' }, border: '1px solid gray' }}>
             <SearchIconWrapper>
               <SearchIcon />
             </SearchIconWrapper>
