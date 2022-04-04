@@ -60,7 +60,7 @@ const Footer = () => {
             <RssFeed sx={{ margin: { xs: '0 5px', md: '0' }, height: '100%', width: '100%' }}/>
           </ImgLink>
         </FooterColumn>
-        <FooterColumn style={{ flexDirection: 'column' }} flex='1' margin='0 150px' mobileOrder='1'>
+        <FooterColumn style={{ flexDirection: 'column', paddingTop: '20px' }} flex='1' margin='0 150px' mobileOrder='1'>
           <CompanyLogo />
           <LogoUnderline />
         </FooterColumn>
