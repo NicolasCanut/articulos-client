@@ -52,7 +52,7 @@ const StyledInputBase = styled(InputBase)(({ theme }) => ({
   }
 }))
 
-const Navbar = () => {
+const Topnav = () => {
   const [prevScrollPos, setPrevScrollPos] = useState(0)
   const [visible, setVisible] = useState(true)
 
@@ -122,4 +122,4 @@ const Navbar = () => {
   )
 }
 
-export default Navbar
+export default Topnav
