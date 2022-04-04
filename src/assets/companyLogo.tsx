@@ -5,6 +5,7 @@ import { ImgLink } from '../components/Typography'
 const LogoImg = styled.div.attrs((props: {imgSrc: string}) => props)`
     width: 100%;
     height: 100%;
+    min-height: 30px;
     background-image: url(${(props) => props.imgSrc});
     background-position: center;
     background-repeat: no-repeat;
