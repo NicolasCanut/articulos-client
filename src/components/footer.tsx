@@ -67,7 +67,7 @@ const Footer = () => {
         </FooterColumn>
         <FooterColumn flex='1' margin='' mobileOrder='3' style={{ maxWidth: '300px' }}>
           <ImgLink height='50px' width='140px' target='_blank' rel='noopener noreferrer' href='https://play.google.com/store/apps/details?id=app.lanacion.activity&hl=es_419'><img style={{ height: '100%', width: '100%' }} alt='Disponible en Google Play' src='https://play.google.com/intl/en_us/badges/static/images/badges/es_badge_web_generic.png'/></ImgLink>
-          <ImgLink height='50px' width='140px' target='_blank' rel='noopener noreferrer' href='https://apps.apple.com/ar/app/la-nacion/id410689702'><img style={{ height: '100%', width: '100%' }} alt='Consíguelo en App Store' src={ require('../../assets/img/AppleAppStoreBadge.png') }/></ImgLink>
+          <ImgLink height='50px' width='140px' target='_blank' rel='noopener noreferrer' href='https://apps.apple.com/ar/app/la-nacion/id410689702'><img style={{ height: '100%', width: '100%' }} alt='Consíguelo en App Store' src={ require('../assets/img/AppleAppStoreBadge.png') }/></ImgLink>
         </FooterColumn>
     </FooterRow>
     <FooterRow flex='1' mobileDisplay='none'>
