@@ -14,6 +14,7 @@ import { Main } from '../Containers'
 import CompanyLogo from '../../assets/companyLogo'
 
 const Search = styled('div')(({ theme }) => ({
+  minWidth: '100px',
   position: 'relative',
   borderRadius: theme.shape.borderRadius,
   backgroundColor: alpha(theme.palette.common.white, 0.15),
@@ -22,8 +23,7 @@ const Search = styled('div')(({ theme }) => ({
   },
   marginRight: theme.spacing(2),
   marginLeft: 0,
-  width: '100%',
-  [theme.breakpoints.up('md')]: {
+  [theme.breakpoints.up('sm')]: {
     marginLeft: theme.spacing(3),
     width: 'auto'
   }
@@ -43,7 +43,6 @@ const StyledInputBase = styled(InputBase)(({ theme }) => ({
   color: 'inherit',
   '& .MuiInputBase-input': {
     padding: theme.spacing(1, 1, 1, 0),
-    // vertical padding + font size from searchIcon
     paddingLeft: `calc(1em + ${theme.spacing(4)})`,
     transition: theme.transitions.create('width'),
     width: '100%',
@@ -74,13 +73,13 @@ const Navbar = () => {
     <Box sx={{ flexGrow: 1 }}>
       <AppBar position="fixed" sx={{ transition: 'top 0.2s', top: visible ? '0' : '-70px' }}>
         <Main height="auto" flexDirection="row" marginTop="0">
-        <Toolbar sx={{ width: '100%', padding: '0 !important' }}>
+        <Toolbar sx={{ minHeight: '44px !important', width: '100%', padding: '0 !important' }}>
           <IconButton
             size="large"
             edge="start"
             color="inherit"
             aria-label="open drawer"
-            sx={{ mr: 2, marginRight: 0 }}
+            sx={{ mr: 2, marginRight: 0, display: { xs: 'none', md: 'block' } }}
           >
             <MenuIcon />
           </IconButton>
@@ -88,11 +87,11 @@ const Navbar = () => {
             variant="h6"
             noWrap
             component="div"
-            sx={{ display: { xs: 'none', sm: 'block' }, fontSize: '15px' }}
+            sx={{ display: { xs: 'none', md: 'block' }, fontSize: '15px' }}
           >
             <span style={{ fontFamily: 'Arial' }}>Menú</span>
           </Typography>
-          <Search sx={{ display: { sm: 'none', lg: 'block' }, border: '1px solid gray' }}>
+          <Search sx={{ display: { xs: 'none', md: 'block' }, border: '1px solid gray' }}>
             <SearchIconWrapper>
               <SearchIcon />
             </SearchIconWrapper>
@@ -107,14 +106,14 @@ const Navbar = () => {
             variant="h6"
             noWrap
             component="div"
-            sx={{ flexGrow: 1, display: { xs: 'flex', md: 'flex' }, height: { xs: '15px', md: '40px' }, width: { xs: '100px', md: '300px' }, justifyContent: 'center', margin: 'auto' }}
+            sx={{ flexGrow: 1, display: { xs: 'flex', md: 'flex' }, justifyContent: { xs: 'space-between', md: 'center' }, margin: 'auto' }}
           >
                 <CompanyLogo />
             </Typography>
           </Box>
-          <Box sx={{ display: { xs: 'flex', md: 'flex' } }}>
-            <Button sx={{ border: '1px solid lightgray', marginRight: { xs: '10px', md: '30px' }, fontSize: { xs: '10px', sm: '13px' }, backgroundColor: '#FFFF24', '&:hover': { color: '#000000', backgroundColor: '#FFFF24 !important' } }} color="inherit">SUSCRIBITE</Button>
-            <Button sx={{ border: '1px solid', marginRight: { xs: '10px', md: '30px' }, fontSize: { xs: '10px', sm: '13px' } }} color='secondary'>INGRESAR</Button>
+          <Box sx={{ display: { xs: 'flex', md: 'flex' }, justifyContent: 'flex-end' }}>
+            <Button sx={{ border: { xs: 'none', md: '1px solid lightgray' }, margin: '0 20px', fontSize: { sm: '13px' }, backgroundColor: { xs: 'none', md: '#FFFF24' }, color: { xs: '#036998', md: '#000000' }, '&:hover': { color: { xs: '#036998', md: '#000000' }, backgroundColor: { xs: '#ffffff', md: '#FFFF24 !important' } } }}>SUSCRIBITE</Button>
+            <Button sx={{ border: '1px solid', fontSize: { xs: '10px', sm: '13px' }, display: { xs: 'none', md: 'block' } }} color='secondary'>INGRESAR</Button>
           </Box>
         </Toolbar>
         </Main>

@@ -9,7 +9,7 @@ import { Box } from '@mui/material'
 const FooterRow = styled.section<{mobileDisplay: string, flex: string }>`
     display: flex;
     flex: ${(props) => props.flex};
-    @media (max-width: 1024px) {
+    @media (max-width: 900px) {
         display: ${(props) => props.mobileDisplay};
         flex-direction: column;
         align-items: center;
@@ -26,7 +26,7 @@ const FooterColumn = styled.section<{ flex: string, mobileOrder: string, margin:
     font-family: arial;
     font-size: 0.875em;
     color: #5a5a5a;
-    @media (max-width: 1024px) {
+    @media (max-width: 900px) {
         order: ${(props) => props.mobileOrder};
         width: 400px;
         margin: 10px 0;
@@ -36,7 +36,7 @@ const FooterColumn = styled.section<{ flex: string, mobileOrder: string, margin:
 `
 
 const LogoUnderline = styled.hr`
-    @media (max-width: 1024px){
+    @media (max-width: 900px){
         display: block;
         width: 100vw;
         margin: 10px 0 0 0;
@@ -47,7 +47,7 @@ const Footer = () => {
   return (
     <Main height='100%' flexDirection='column' marginTop='0'>
     <FooterRow flex='1' mobileDisplay='flex' style={{ borderBottom: '1px solid gray' }}>
-        <FooterColumn flex='1' margin='' mobileOrder='2'>
+        <FooterColumn flex='1' margin='' mobileOrder='2' style={{ minWidth: '200px', maxWidth: '300px' }}>
           <ImgLink href='https://www.facebook.com/lanacion' height='30px' width='30px' target='_blank' rel='noopener noreferrer'>
             <Facebook sx={{ margin: { xs: '0 5px', md: '0' }, height: '100%', width: '100%' }}/>
           </ImgLink>
@@ -61,11 +61,11 @@ const Footer = () => {
             <RssFeed sx={{ margin: { xs: '0 5px', md: '0' }, height: '100%', width: '100%' }}/>
           </ImgLink>
         </FooterColumn>
-        <FooterColumn style={{ flexDirection: 'column', paddingTop: '20px' }} flex='1' margin='0 150px' mobileOrder='1'>
+        <FooterColumn style={{ flexDirection: 'column', paddingTop: '20px' }} flex='1' margin='0 7%' mobileOrder='1'>
           <CompanyLogo />
           <LogoUnderline />
         </FooterColumn>
-        <FooterColumn flex='1' margin='' mobileOrder='3'>
+        <FooterColumn flex='1' margin='' mobileOrder='3' style={{ maxWidth: '300px' }}>
           <ImgLink height='50px' width='140px' target='_blank' rel='noopener noreferrer' href='https://play.google.com/store/apps/details?id=app.lanacion.activity&hl=es_419'><img style={{ height: '100%', width: '100%' }} alt='Disponible en Google Play' src='https://play.google.com/intl/en_us/badges/static/images/badges/es_badge_web_generic.png'/></ImgLink>
           <ImgLink height='50px' width='140px' target='_blank' rel='noopener noreferrer' href='https://apps.apple.com/ar/app/la-nacion/id410689702'><img style={{ height: '100%', width: '100%' }} alt='Consíguelo en App Store' src={ require('../../assets/img/AppleAppStoreBadge.png') }/></ImgLink>
         </FooterColumn>
