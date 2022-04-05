@@ -7,7 +7,7 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+@font-face {
+  font-family: 'SuecaSlab';
+  src: local('SuecaSlab'), url('./fonts/sueca-slab-regular-web.woff.ttf') format('woff');
 }
