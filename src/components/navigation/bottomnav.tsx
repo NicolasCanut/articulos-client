@@ -37,7 +37,7 @@ const Bottomnav = () => {
   })
 
   return (
-      <Box sx={{ display: { xs: 'flex', md: 'none' }, position: 'fixed', transition: 'bottom 0.2s', bottom: visible ? '0' : '-70px', right: 0, left: 0, margin: 'auto', width: '100%', border: '1px solid red', backgroundColor: '#ffffff' }}>
+      <Box sx={{ display: { xs: 'flex', md: 'none' }, position: 'fixed', transition: 'bottom 0.2s', bottom: visible ? '0' : '-70px', right: 0, left: 0, margin: 'auto', width: '100%', border: '1px solid red', backgroundColor: '#ffffff', zIndex: 999 }}>
         <BottomNavigation
         value={value}
         onChange={(event, newValue) => {

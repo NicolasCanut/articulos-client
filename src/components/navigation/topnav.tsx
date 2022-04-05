@@ -72,7 +72,7 @@ const Topnav = () => {
   return (
     <Box sx={{ flexGrow: 1 }}>
       <AppBar position="fixed" sx={{ transition: 'top 0.2s', top: visible ? '0' : '-70px' }}>
-        <Main height="auto" flexDirection="row" marginTop="0">
+        <Main height="auto" flexDirection="row" marginTop="0" onBreakpoint=''>
         <Toolbar sx={{ minHeight: '44px !important', width: '100%', padding: '0 !important' }}>
           <IconButton
             size="large"
