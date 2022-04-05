@@ -2,12 +2,13 @@ import styled from 'styled-components'
 
 export const Title = styled.h1`
     z-index: 999;
-    font-size: 1.875rem;
-    font-weight: 500;
-    line-height: 2.3125rem;
+    font-size: 1.625rem;
+    font-weight: 600;
+    line-height: 2.0625rem;
     letter-spacing: -0.4px;
     text-decoration: underline;
     width: 1366px !important;
+    text-underline-position: under;
 `
 
 export const TextLink = styled.a`
