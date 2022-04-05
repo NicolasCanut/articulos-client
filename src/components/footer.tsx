@@ -28,7 +28,7 @@ const FooterColumn = styled.section<{ flex: string, mobileOrder: string, margin:
     color: #5a5a5a;
     @media (max-width: 900px) {
         order: ${(props) => props.mobileOrder};
-        width: 400px;
+        width: 320px;
         margin: 10px 0;
         justify-content: space-around;
         text-align: center;
@@ -45,7 +45,7 @@ const LogoUnderline = styled.hr`
 
 const Footer = () => {
   return (
-    <Main height='100%' flexDirection='column' marginTop='0'>
+    <Main height='100%' flexDirection='column' marginTop='0' onBreakpoint=''>
     <FooterRow flex='1' mobileDisplay='flex' style={{ borderBottom: '1px solid gray' }}>
         <FooterColumn flex='1' margin='' mobileOrder='2' style={{ minWidth: '200px', maxWidth: '300px' }}>
           <ImgLink href='https://www.facebook.com/lanacion' height='30px' width='30px' target='_blank' rel='noopener noreferrer'>
