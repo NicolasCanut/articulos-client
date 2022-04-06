@@ -1,9 +1,9 @@
 import React from 'react'
 import styled from 'styled-components'
 import { Facebook, Twitter, Instagram, RssFeed } from '@mui/icons-material'
-import { Main } from './Containers'
+import { Main } from './containers'
 import CompanyLogo from '../assets/companyLogo'
-import { ImgLink, TextLink } from './Typography'
+import { ImgLink, TextLink } from './typography'
 import { Box } from '@mui/material'
 
 const FooterRow = styled.section<{mobileDisplay: string, flex: string }>`

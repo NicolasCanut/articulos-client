@@ -10,7 +10,7 @@ import InputBase from '@mui/material/InputBase'
 import MenuIcon from '@mui/icons-material/Menu'
 import SearchIcon from '@mui/icons-material/Search'
 import { Button } from '@mui/material'
-import { Main } from '../Containers'
+import { Main } from '../containers'
 import CompanyLogo from '../../assets/companyLogo'
 
 const Search = styled('div')(({ theme }) => ({

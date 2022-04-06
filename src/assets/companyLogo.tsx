@@ -1,6 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
-import { ImgLink } from '../components/Typography'
+import { ImgLink } from '../components/typography'
 
 const LogoImg = styled.div.attrs((props: {imgSrc: string}) => props)`
     width: 100%;

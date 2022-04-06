@@ -1,9 +1,9 @@
 import React from 'react'
-import { Advertising, Aside, Cover, Main, Wrapper } from '../components/Containers'
+import { Advertising, Aside, Cover, Main, Wrapper } from '../components/containers'
 import Footer from '../components/footer'
 import BottomNav from '../components/navigation/bottomnav'
 import Topnav from '../components/navigation/topnav'
-import { Title } from '../components/Typography'
+import { Title } from '../components/typography'
 
 const Home = () => {
   return (
