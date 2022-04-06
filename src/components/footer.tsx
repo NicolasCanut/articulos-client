@@ -36,10 +36,10 @@ const FooterColumn = styled.section<{ flex: string, mobileOrder: string, margin:
 `
 
 const LogoUnderline = styled.hr`
+    margin: 10px 0;
     @media (max-width: 900px){
         display: block;
         width: 100vw;
-        margin: 10px 0 0 0;
     }
 `
 
@@ -70,7 +70,7 @@ const Footer = () => {
           <ImgLink height='50px' width='140px' target='_blank' rel='noopener noreferrer' href='https://apps.apple.com/ar/app/la-nacion/id410689702'><img style={{ height: '100%', width: '100%' }} alt='Consíguelo en App Store' src={ require('../assets/img/AppleAppStoreBadge.png') }/></ImgLink>
         </FooterColumn>
     </FooterRow>
-    <FooterRow flex='1' mobileDisplay='none'>
+    <FooterRow flex='1' mobileDisplay='none' style={{ marginTop: '20px' }}>
       <FooterColumn flex='2' margin='0 150px 0 0' mobileOrder=''>
         <TextLink href='http://especiales.lanacion.com.ar/varios/mapa-sitio/index.html' target='_blank' rel='noopener noreferrer'>
           Mapa del sitio
