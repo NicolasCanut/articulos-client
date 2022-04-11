@@ -110,6 +110,19 @@ const formatDate = (date: string) => {
   return newDate
 }
 
+interface ArticleObj {
+  _id: string,
+  display_date: string,
+  headlines: {
+    basic: string
+  },
+  promo_items: {
+    basic: {
+      url: string
+    }
+  }
+}
+
 const Articles = () => {
   const [articles, setArticles] = useState([])
   const [limit, setLimit] = useState(8)
@@ -131,11 +144,13 @@ const Articles = () => {
 
   // Decidí ordenar los tags en orden alfabético. Es mi interpretación de la consigna: "ordenar los tags de mayor a menor",
   // debido a que los objetos tag no disponen de una propiedad numerica o que haga referencia a un numero.
-  let tagList: any[] = []
-  let tagsArr: any[] = []
 
   // Concatena los tags de todos los articulos y los ordena alfabeticamente segun propiedad "text"
-  const finalList = () => {
+  let tagsArr: any[] = []
+  let tagList: any[] = []
+  let tagsArrLast: any[] = []
+
+  const tagsList = () => {
     articles.map((article: any) => {
       const tags = article.taxonomy.tags
       return tags.map((tag:any) => {
@@ -143,7 +158,6 @@ const Articles = () => {
         return tagsArr
       })
     })
-    let tagsArrLast: any[] = []
     tagsArrLast.push(tagsArr[0])
 
     // Remueve los elementos repetidos segun propiedad "slug"
@@ -155,7 +169,7 @@ const Articles = () => {
     tagList = tagsArrLast.slice(0, 10)
   }
 
-  finalList()
+  tagsList()
 
   return (
     <div style={{ display: 'flex', flexDirection: 'column' }}>
@@ -168,7 +182,7 @@ const Articles = () => {
         </TagSection>
       <Grid>
         {
-          articles.slice(0, limit).map((article: any) =>
+          articles.slice(0, limit).map((article: ArticleObj) =>
             <Article key={article._id}>
               <ArtImg src={article?.promo_items?.basic.url}/>
               <h4>{article.headlines.basic}</h4>
