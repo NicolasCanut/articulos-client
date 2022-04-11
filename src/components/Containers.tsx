@@ -1,5 +1,15 @@
 import styled from 'styled-components'
 
+export const Wrapper = styled.div`
+    height: 100%;
+    width: 100%;
+    background-color: #ffffff;
+    margin: 0;
+    padding: 0;
+    font-family: 'SuecaSlab';
+    overflow: hidden;
+`
+
 export const Main = styled.div<{ height: string, flexDirection: string, marginTop: string, onBreakpoint: string }>`
     display: flex;
     flex-direction: ${(props) => props.flexDirection || 'row'};
@@ -8,26 +18,13 @@ export const Main = styled.div<{ height: string, flexDirection: string, marginTo
     max-width: 90%;
     margin: auto;
     margin-top: ${(props) => props.marginTop};
-    border: 1px solid green;
     overflow: hidden;
     @media(max-width: 900px){
         ${(props) => props.onBreakpoint}
     }
 `
 
-export const Wrapper = styled.div`
-    height: 100%;
-    width: 100%;
-    background-color: #ffffff;
-    margin: 0;
-    padding: 0;
-    font-family: 'SuecaSlab';
-    border: 1px solid blue;
-    overflow: hidden;
-`
-
 export const Cover = styled.div`
-    border: 1px solid red;
     height: 170px;
     width: 100%;
     margin-top: 80px;
@@ -35,12 +32,13 @@ export const Cover = styled.div`
 `
 
 export const Aside = styled.aside`
-    border: 1px solid blue;
-    height: 100%;
+    min-height: 1000px;
     width: 300px;
     min-width: 300px;
     background-color: #9FDAE9;
-    @media(max-width: 900px){
+    margin: auto;
+    z-index: 999;
+    @media(max-width: 1200px){
         display: none;
     }
 `

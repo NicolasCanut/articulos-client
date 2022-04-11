@@ -5,7 +5,6 @@ import styled from 'styled-components'
 const TagSection = styled.section`
   display: flex;
   justify-content: space-between;
-  border: 1px solid blue;
   height: 20px;
   margin-bottom: 30px;
   @media (min-width: 900px){
@@ -13,6 +12,8 @@ const TagSection = styled.section`
   }
   @media (max-width: 900px){
     overflow-x: scroll;
+    overflow-y: hidden;
+    padding: 10px;
   }
   `
 
@@ -59,10 +60,9 @@ const Grid = styled.section`
     -ms-grid-columns: 1fr 1fr 1fr;
     grid-template-columns: 1fr 1fr 1fr;
   }
-  
 `
 const Article = styled.article`
-  border: 1px solid red;
+
 `
 
 const ArtImg = styled.img`
