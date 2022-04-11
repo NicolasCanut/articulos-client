@@ -15,8 +15,8 @@ const Home = () => {
           <Advertising height='100%' width='100%'/>
         </Main>
       </Cover>
-      <Main height= '100vh' flexDirection='row' marginTop='40px' onBreakpoint=''>
-        <Main height='100%' flexDirection='column' marginTop='' onBreakpoint='max-width: 100%'>
+      <Main height= 'auto' flexDirection='row' marginTop='40px' onBreakpoint=''>
+        <Main height='auto' flexDirection='column' marginTop='' onBreakpoint='max-width: 100%'>
           <Title>Acumulado Grilla</Title>
           <Articles/>
         </Main>

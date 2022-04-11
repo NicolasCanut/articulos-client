@@ -16,10 +16,12 @@ const TagSection = styled.section`
 const TagLink = styled.a`
   text-decoration: none;
   color: #0000EE;
+  font-size: 0.875rem;
 `
 
 const Grid = styled.section`
   display: grid;
+  height: auto;
   grid-column-gap: 0.625em;
   grid-row-gap: 1.875em;
   
@@ -61,6 +63,24 @@ const ArtImg = styled.img`
   width: 100%;
 `
 
+const LoadMoreButton = styled.button<{ display: string }>`
+  display: ${(props) => props.display};
+  position: relative;
+  background-color: #FFF;
+  border: 1px solid #0074c4;
+  color: #0074c4;
+  cursor: pointer;
+  margin: 10px;
+  padding: 0.75em 1.5em;
+  left: 35%;
+  font-weight: 600;
+  :hover{
+    background-color: #0074c4;
+    color: #FFF;
+  }
+
+`
+
 const formatDate = (date: string) => {
   const months = ['Enero', 'Febrero', 'Marzo', 'Abril', 'Mayo', 'Junio', 'Julio', 'Agosto', 'Septiembre', 'Octubre', 'Noviembre', 'Diciembre']
   const parsedDate = parseInt(date.substring(5, 7))
@@ -70,6 +90,7 @@ const formatDate = (date: string) => {
 
 const Articles = () => {
   const [articles, setArticles] = useState([])
+  const [limit, setLimit] = useState(8)
 
   try {
     useEffect(() => {
@@ -125,7 +146,7 @@ const Articles = () => {
         </TagSection>
       <Grid>
         {
-          articles.map((article: any) =>
+          articles.slice(0, limit).map((article: any) =>
             <Article key={article._id}>
               <ArtImg src={article?.promo_items?.basic.url}/>
               <h4>{article.headlines.basic}</h4>
@@ -134,6 +155,7 @@ const Articles = () => {
           )
         }
       </Grid>
+      <LoadMoreButton display={articles[limit] ? 'block' : 'none'} onClick={() => setLimit(limit + 6)}>MÁS NOTAS DE ACUMULADO GRILLA</LoadMoreButton>
     </div>
   )
 }
