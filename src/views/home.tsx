@@ -4,6 +4,7 @@ import Footer from '../components/footer'
 import BottomNav from '../components/navigation/bottomnav'
 import Topnav from '../components/navigation/topnav'
 import { Title } from '../components/typography'
+import Articles from '../services/articles'
 
 const Home = () => {
   return (
@@ -17,7 +18,7 @@ const Home = () => {
       <Main height= '100vh' flexDirection='row' marginTop='40px' onBreakpoint=''>
         <Main height='100%' flexDirection='column' marginTop='' onBreakpoint='max-width: 100%'>
           <Title>Acumulado Grilla</Title>
-          <div id='grilla'></div>
+          <Articles/>
         </Main>
         <Aside>
         </Aside>

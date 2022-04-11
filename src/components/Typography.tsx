@@ -9,6 +9,7 @@ export const Title = styled.h1`
     text-decoration: underline;
     width: 1366px !important;
     text-underline-position: under;
+    margin-bottom: 50px;
 `
 
 export const TextLink = styled.a`
