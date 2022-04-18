@@ -37,13 +37,13 @@ const Bottomnav = () => {
   })
 
   return (
-      <Box sx={{ display: { xs: 'flex', md: 'none' }, position: 'fixed', transition: 'bottom 0.2s', bottom: visible ? '0' : '-70px', right: 0, left: 0, margin: 'auto', width: '100%', border: '1px solid red', backgroundColor: '#ffffff', zIndex: 999 }}>
+      <Box sx={{ display: { xs: 'flex', md: 'none' }, position: 'fixed', transition: 'bottom 0.2s', bottom: visible ? '0' : '-70px', right: 0, left: 0, margin: 'auto', width: '100%', backgroundColor: '#ffffff', zIndex: 999 }}>
         <BottomNavigation
         value={value}
         onChange={(event, newValue) => {
           setValue(newValue)
         }}
-        sx={{ height: '70px', width: '700px', maxWidth: '90%', border: '1px solid blue', color: '#000000', margin: 'auto' }}
+        sx={{ height: '70px', width: '700px', maxWidth: '90%', color: '#000000', margin: 'auto' }}
         >
         <RouterLink to={'/'}><BottomNavigationAction disableRipple sx={{ color: 'inherit', position: 'relative', top: '5px' }} icon={<HomeIcon/>}/>Home</RouterLink>
         <RouterLink to={'/'}><BottomNavigationAction disableRipple sx={{ color: 'inherit', position: 'relative', top: '5px' }} icon={<CreditCardIcon />} />Club LA NACION</RouterLink>
